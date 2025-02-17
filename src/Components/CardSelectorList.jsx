@@ -10,13 +10,14 @@ export default function CardSelectorList() {
 
     function renderCards() {
         return languages.map(language => {
-            return (<CardSelector
-                key={language.id}
-                nome={language.title}
-                descrizione={language.description}
-                isOpen={activeCard === language.id}
-                onToggle={() => setActiveCard(language.id)}
-            />
+            return (
+                <CardSelector
+                    key={language.id} // La key è usata qui, ed è corretta
+                    nome={language.title}
+                    descrizione={language.description}
+                    isOpen={activeCard === language.id}
+                    onToggle={() => setActiveCard(activeCard === language.id ? null : language.id)} // Toggle per mostrare/nascondere
+                />
             )
         })
     }

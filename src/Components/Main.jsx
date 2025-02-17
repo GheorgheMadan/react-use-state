@@ -1,4 +1,4 @@
-import CardSelectorList from './CardSelector'
+import CardSelectorList from './CardSelectorList'
 
 // Main.jsx
 export default function Main() {
